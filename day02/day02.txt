@@ -1,0 +1,19 @@
+类名的设置
+
+样式的设置
+
+v-for in 数组(合法的对象)
+
+对象的创建
+instanceof
+
+闭包空间 (Closure)
+开发中尽量减少使用,一定会导致内存泄漏
+ 内存泄漏: 本应该释放的空间没有释放
+
+v-if
+
+v-show
+
+迭代数组 就是循环数组
+forEach() filter()过滤 some() findIndex()

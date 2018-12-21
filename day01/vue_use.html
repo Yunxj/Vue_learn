@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 第一步 导入vue-->
+    <script src="./lib/vue-2.4.0.js"></script>
+</head>
+<body>
+    <!--第二步创建 vue的控制区域 -->
+    <div id="app"> 
+        <!-- 第四步渲染 -->
+        <!-- 插值表达式 -->
+        {{hello}}
+        <p v-text="hello1"></p>
+        <!-- v-bing: : data没有数据会报错   :abc="'abc'" 字符串-->
+        <input :abc="'abc'" type="button" :name="name" value="按钮" v-bind:title="xxx">
+        <input type="button" v-on:click="show" value="吊我呀">
+    </div>
+    
+    <script>
+        // 第三步创建veu的实力
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                hello:'你好啊vue.js',
+                hello1:'你好啊vue.js',
+                xxx:'哈哈',
+                name:'999999'
+            },
+            methods: {
+                show: function () {
+                    alert('哈哈')
+                }
+            }
+        })    
+        
+    </script>
+</body>
+</html>

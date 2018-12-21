@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+        .red {
+            color:red
+        }
+        .thin {
+            font-weight: 700
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 同时使用多个样式 -->
+        <!-- <h1 :class="['red', 'thin']"></h1> -->
+        <h1 :class="classArr">
+            ahhahahaa
+        </h1>
+    </div>
+    
+</body>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data: {
+            classArr:['red', 'thin']
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,31 @@
+MVC  后端思想 Model View Modle
+MVC 中 V View 是在前后端分离思想提取出来的, 形成MVVM的前端思想
+MVVM 前端思想 Model View ViewModel (new的对象,完成数据双向绑定)
+
+指令 v-  后面都是表达式(变量)
+
+v-cloak 遮盖  隐藏 {{msg}} 插值表达式(Mustache 小胡子语法)
+v-text 没有闪烁问题 是个属性 
+v-html 可读取标签
+v-bind:title 简写--> :   :title
+v-on:click 简写--> @ 事件绑定 (事件前面没有on)
+v-modle 唯一数据双向绑定 只能绑定input 的value 
+
+获取data 或methods 中数据
+用this.msg
+
+例:跑马灯
+
+事件修饰符,顺序很重要 (加载事件绑定后面,串联)
+在事件的后面,通过.的形式来修饰事件的效果
+.stop 
+.prevent
+.capture
+.self
+.once
+.passive
+.
+
+面包屑
+
+
