@@ -1,0 +1,30 @@
+vue-resource
+
+对象传参
+
+result.body
+
+请求数据 添加 删除(crud) 分页 等基本功能都有 
+
+http://litc.pro:9999/ (获取的接口)
+
+全局root
+
+emulateJSON: true (一传统表单格式提交)
+application/x-ww-form-urlencoded 的 Content-Type
+
+动画 v-enter  v-leave
+
+钩子动画函数(执行函数内是原生js,el.style.tranform = "translate(20px, 30px)" )
+el.offsetWidth (offset属性要加一个,刷新动画) 不加不行
+enter中要done() 
+小球半场动画
+
+
+
+
+
+
+问题
+	.then是什么
+	bootstrap的基本使用 (b3table panel)
