@@ -1,0 +1,119 @@
+msg.replace(/单纯/g, '邪恶')    不需要while循环,  直接用正则来替换方便快捷
+
+{{msg | 过滤器名字 | 过滤器名字 }}  调用 (就近原则)
+只能用于v-bind和插值表达式  ( | ) 管道符
+过滤器不会修改原数据,输出去的一道处理
+处理简单的文本处理
+全局 和 私有  (结果要return)
+要放在vm上面 ,可以多个名字不同就可以了
+Vue.filter('过滤器名字',function(content){
+       return '￥' +content + '元'
+})   
+(静态方法 构造函数 永远只有一个)  
+(对象 和 原型 上的是实例成员) 两者不能相互使用
+回调函数一定要传值
+<p> {{msg | 过滤器名字 | 过滤器名字 }}  </p>
+ls -lh  | grep 文件名   查找文件
+
+ES6 
+function  (item = "") {} 给形参默认值
+私有过滤器 ,在指定的节点区域内,filters与data , methods同级 ,在当前的实例中
+
+@keyup的修饰符(可以加码值)
+.enter 
+.tab 
+自定义按键修饰符
+Vue.config.keyCodes.f2 = 113
+
+自定义指令 代替自动获取焦点 (autofoucs)
+参数1: 指令名
+参数2: 指令的钩子函数 (在特定 阶段执行的函数, 生命周期函数)
+Vue.directive('focus', {
+       bind: function(el) {     页面加载前
+	css在这里面
+       }
+       inserted:function (el) {   一次
+       	el是原生方法 DOM对象
+                el.focus()
+	js行为在这里面, 防止不生效
+       }
+       update: function(el) {   多次
+
+       }
+       componentUpdated: function(el) {
+
+       }
+       unbind:function(el) {
+
+       }
+	了解指令的生命周期(重点是组件的生命周期)
+})
+
+自定义私有指令
+directives: {
+       'fontweigth' : {
+              bing: function(el, binding) {
+                      el.style.color = binding.value
+              }
+        }
+        
+        fontSize:function (el, binding) {
+        	el.style.color = binding.value
+        }
+}
+
+生命周期函数 = 生命周期钩子 = 生命周期事件
+
+var vm = new Vue({
+	el:'#app',
+	data:{
+		msg:'哈哈'
+	},
+	methods:{
+		show( ) { 
+			console.log('show方法')
+		 }
+	},
+	beforeCreate() {
+		console.log(this.msg) undefined
+		收不到data 和methods的值
+		什么都没有
+		第一个生周期函数
+	},
+	created() {
+		可以收到值
+		ajax请求
+		以上是数据初始化
+		第二个生命周期函数
+	},
+	beforeMount() {
+		可以收到值
+		以下页面事件挂载和页面渲染
+		模板编译完成
+		页面还没加载完,即将挂载到DOM树上
+		第三个生命周期函数
+	},
+	mounted() {
+		可以收到值
+		模板编译完成,已挂载到页面中,页面渲染完毕
+		操作页面的节点时
+		第四个生命周期函数,也是最后一个
+	},
+	beforeUpdate() {    //运行时的两个事件,组件的生命周期函数
+		数据更新,但页面没有更新(旧的)
+	},
+	updated() {
+		 数据和页面都更新了	
+	},
+	beforeDestroy(){
+		销毁阶段,还未销毁
+	},
+	destroy() {
+		销毁,什么都用不了	
+	}
+})
+
+时间节点
+
+jsonp的原理, node.js ,http 
+

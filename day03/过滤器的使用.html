@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p> {{msg | myFilter}} </p>
+    </div>
+    <div id="app2">
+            <p> {{msg | myFilter}} </p>
+        </div>
+    <script>
+        //要放在vm的上面
+        Vue.filter('myFilter', function (msg) { 
+            return msg.replace(/吃藕/g, '美丽')
+         })
+        var vm = new Vue({
+           el:'#app',
+           data:{
+               msg:'曾经的小巷子, 你那么吃藕,吃藕的让人害怕,吃藕的晚上都不能看,不然一晚上都不能睡觉了'
+           },
+           methods:{}
+        })
+        var vm2 = new Vue({
+           el:'#app2',
+           data:{
+               msg:'曾经的小巷子, 你那么吃藕,吃藕的让人害怕,吃藕的晚上都不能看,不然一晚上都不能睡觉了'
+           },
+           methods:{},
+           filters:{
+               
+           }
+        })
+
+
+    </script>
+</body>
+
+</html>

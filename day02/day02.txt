@@ -16,4 +16,7 @@ v-if
 v-show
 
 迭代数组 就是循环数组
-forEach() filter()过滤 some() findIndex()
+forEach() 循环遍历
+some() 查找到,return true 没有返回值
+findIndex()  查找到,return true 返回一个索引值
+filter()过滤 return true 返回满足条件的新数组
