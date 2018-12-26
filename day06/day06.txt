@@ -6,3 +6,40 @@ var routerobj = new VueRouter({
 
 <routwe-view></router-view> router 的占位符
 hash 注意加#
+
+不想要#显示, 
+mode: 'history'  必须要后端给与支持
+
+redirect 的作用 与后端node.js中不是一个东西
+
+query 和 params 参数
+
+params要完全匹配
+
+事件
+@keyup
+
+watch: {} vm实例中的
+监听路由 
+watch{   
+	$route(to, from) {}
+}
+computed  计算 (处理字符串)
+只能在内容使用时修改
+在外部(data中不能再申明,也不能修改)
+
+methods 方法
+
+nrm  (改变npm的下载源地址)
+npm i nrm -g
+
+npm uninstall xxx文件名 -g 卸载
+
+.css  .scss
+
+gulp 基于task任务, 小巧灵活,适合小的
+
+webpack 以项目为单位
+
+webpack 路由 watch component methods 
+ul>li*8{$啊哈哈}

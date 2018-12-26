@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue-2.4.0.js"></script>
+    <script src="./lib/vue-router-3.0.1.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <router-link to="/login/10/zs">登录</router-link>
+        <router-link to="/register">注册</router-link>
+        <router-view></router-view>
+    </div>
+
+    <script>
+        var login = {
+            template: '<h2>天生我材必有用</h2>',
+            data() {
+                return {
+                    msg:'在路由中定义data,要return返回一个对象的形式,防止与vm中的data发生冲突'
+                }
+            }
+        }
+        var register = {
+            template: '<h1>千金散尽还复来</h1>'
+        }
+        var router = new VueRouter({
+            routes:[
+                //直接在路由中注册了组件component -->login
+                {path:'/login/:id/:name', component: login},
+                {path:'/register', component: register}
+            ]
+        })
+        var vm = new Vue({
+            el:'#app',
+            data: {
+
+            },
+            methods: {
+
+            },
+            router
+        })
+    </script>
+</body>
+
+</html>

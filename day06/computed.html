@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="firstname">
+        <input type="text" v-model="lastname">
+        <input type="text" v-model="fullname">
+
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data: {
+                firstname:'',
+                lastname:''
+            },
+            methods: {
+
+            },
+            computed:{
+                'fullname': function () {  
+                    console.log(1212131);
+                    return  this.firstname + '-' + this.lastname
+                }
+
+            }
+            //watch和computed的特点
+            /*
+            watch
+                与data的同级
+                可以监听data和路由
+                常用在监视路由,$route对象的变化
+            computed
+            只要数据发生变化时,计算属性会自动同步
+            同步的结果还会缓存,如果多个地方引用了计算属性, 不会重复计算,每次更新只会计算一次
+            与data同级,是vm实例上的数据,不能喝data中的属性产生冲突,重复声明
+            计算属性无法通过外界修改,只有当内部引用的数据发生变化时才会自动更新
+            
+            */ 
+        })
+    </script>
+</body>
+
+</html>
