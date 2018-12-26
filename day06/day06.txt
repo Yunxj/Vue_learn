@@ -1,0 +1,8 @@
+var routerobj = new VueRouter({
+	routes:[
+		{path:'/login', component: login}
+	]
+})
+
+<routwe-view></router-view> router 的占位符
+hash 注意加#

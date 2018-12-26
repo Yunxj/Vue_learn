@@ -1,0 +1,77 @@
+列表的删除动画
+
+Vue的典型例子 掘金
+var com1 = Vue.extend({			方式1
+		template: '<h1> 哈哈哈 </h1>',
+		data:,
+		methods
+	})          创建模板对象               不常用
+Vue.component('组件名com2' ,com1 )  注册全局组件
+驼峰命名要注意
+<com2> </com2>
+
+Vue.component('组件名com2' ,Vue.extend({	
+	template: '<h1> 哈哈哈 </h1>',
+	data:,
+	methods
+})) 
+
+Vue.component('组件名com2' ,{		方式2
+	template: '<h1> 哈哈哈 </h1>',
+	data:,
+	methods
+})
+组件的根元素都只能有一个
+以上不好用
+
+Vue.component('组件名com2' ,{		方式3
+	template: '#tmpl',   在app的外面定义一个标签template id= tmpl
+	data:,
+	methods
+})
+
+Vue.component('name' , {
+	template: '',
+	data: function() {  方法
+		return {     每次调用一个对象,就创建一个对象, 返回一个新的对象
+			msg: ""
+		}
+	}
+
+})
+实例中的data 可以是个对象
+
+父组件 向 子组件传值 (绑定属性)
+v-bind:parentmsg="msg"
+props: ['parentmsg'] 只读
+修改要在 data中
+"单向下行绑定"
+父组件向下同步到子组件
+子组件无法向上同步到父组件
+
+子组件 向 父组件传值 (绑定事件)
+子组件设定好的情况调研
+父组件
+methods: {
+	show() {}
+}
+子组件
+this.$emit('事件名','数据')
+是vm对象的方法
+
+组件案例
+根据思路写出来,在整理下思路
+
+vue提供了 ref  $refs 操作DOM
+标签和组件 特定的情况用一下,不提倡
+
+后端路由 url地址
+前端路由 组件 hash (# 锚点)
+单页面应用程序(SPA single page application)
+
+
+
+
+微钱所
+
+
