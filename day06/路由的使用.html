@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue-2.4.0.js"></script>
+    <script src="lib/vue-router-3.0.1.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <router-link to="/login">登录</router-link>
+        <router-link to="/register">注册</router-link>
+        <router-view></router-view>
+    
+    </div>
+
+    <script>
+        var login = {
+            template: '<h2>登录组件</h2>'
+        }
+        var register = {
+            template: '<h2>注册组件</h2>'
+        }
+        var router = new VueRouter({
+            routes: [
+                {path: '/login', component: login},
+                {path: '/register', component: register}
+            ]
+
+        })
+        var vm = new Vue({
+            el:'#app',
+            data: {
+                // msg:'我是个大傻子'
+            },
+            methods: {
+
+            },
+            router
+        })
+    </script>
+</body>
+
+</html> 
