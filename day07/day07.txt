@@ -1,0 +1,25 @@
+配置webpack的文件
+	webpack.config.js
+自动打包编译
+webpakc-dev-server工具
+npm i webpack-dev-server -D
+遇到的问题在项目中也要安装
+cnpm i webpack webpack-dev-server -D
+npm run dev  (看效果的)
+在内存中存储着bunble.js
+直接引入根目录的bunble.js
+参数配置的两种方式
+一:在json文件中
+       --open 打开浏览器
+       --port 端口号
+       --contentBase 指定托管的更目录文件路径
+       --hot 只刷新修改的部分,网页不刷新,异步请求
+	热模块替换HMR Hot Module Replacement 
+二: 在webpack.config.js
+     module.exports = {设置}
+
+HtmlWebpackPlugin 的使用
+loader
+style css less sass file url 
+开发时inde.html,其打包代码的引用路径问题
+直接在index.html中创建script在src中引用内存中的bunble.js
