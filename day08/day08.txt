@@ -1,0 +1,29 @@
+babel 把高级语法转换成低级语法
+按装
+webpack.config.js module节点写rules数组中添加规则
+babel-core babel-loader 的版本问题(同是低版本,同是高版本可以用但是stage不能用)
+
+render 中的组件把原app的标签替换
+在钩子函数Mounted(马上) 之前调用
+
+引入vue时官方默认的是common.js,config中要修改  
+resolve:{
+     alias:{
+          'vue$': 'vue/dist/vue.js'
+     }
+}
+vue引用的配置
+node中
+导入 requery()  导出module.exports = {}
+ES6中如何导入和导出
+导入import      from
+export default 和export -->(按需导出) (向外暴露成员)
+
+router 路由的使用
+
+style样式中的scoped(当前组件内部使用)
+使用less要属性lang="less"
+
+模块化VUE组件 router export default   export
+案例结构梳理
+
