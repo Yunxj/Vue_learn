@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>哈哈,这是.vue文件</h1>
+        <h1>哈哈,这是登录.vue文件</h1>
     </div>
 </template>
 

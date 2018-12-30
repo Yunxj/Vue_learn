@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
-    entry:'./main.js', //指定入口 相对路径或绝对路径
+    entry:'./src/main.js', //指定入口 相对路径或绝对路径
     output:{  //不指定,默认./dist
         path: path.join(__dirname,'./dist'),  //指定出口目录,必须是绝对路径
         filename: 'index.js'
@@ -45,7 +45,7 @@ module.exports = {
             },
             { test: /.(eot|svg|ttf|woff|woff2)$/, use: ['url-loader'] },
             { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }, // 配置 Babel 来转换高级的ES语法
-            // { test: /\.vue$/, use: 'vue-loader' }, // 配置 Babel 来转换高级的ES语法
+            // { test: /\.vue$/, use: ['vue-loader'] }, 
             { test: /\.vue$/,loader: 'vue-loader'} //两个方式都可以 不能同时存在
         ]
     },
@@ -54,6 +54,6 @@ module.exports = {
             'vue$': 'vue/dist/vue.js'
         }
     },
-    mode:'development', //开发  developer 开发者  programmer 程序员
+    mode:'development' //开发  developer 开发者  programmer 程序员
 
 }

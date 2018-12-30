@@ -5,13 +5,15 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open --port 3000 --contentBase ./src --hot"
+    "dev1": "webpack-dev-server --open --port 3000 --contentBase ./src --hot",
+    "dev": "webpack-dev-server --open --port 3000 --hot"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.3.1",
-    "vue": "^2.5.21"
+    "vue": "^2.5.21",
+    "vue-router": "^3.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
