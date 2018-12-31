@@ -1,0 +1,30 @@
+ vue-cli 脚手架
+@vue/cli
+@符号表示 src目录
+
+多人开发 eslint规范代码的风格
+个人不建议使用
+
+要cnpm i less less-loader -D 不用配置 
+
+scoped (style 属性 限制样式的作用域)
+
+Mint UI的基于Vue的移动端的组件库
+element 的
+iviewui
+bootstrap mui 推荐使用了
+按需引入文件(工作时)
+装插件 配置文件 
+完全引入文件(学习时)
+
+没必要,自己写样式
+bootstrap
+mui的使用 只能去 github下载源码,把dist的文件下载下来放到src中
+
+本地已有的文件与github建立连接
+git init 
+git add  ./ 
+git commit -m '提交'
+git remote add origin git@github.com:Yunxj/-.git
+git push -u origin master
+git remote add 
